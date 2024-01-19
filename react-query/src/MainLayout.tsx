@@ -11,17 +11,23 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                         <Link to={{ pathname: '/' }}>Home</Link>
                     </Menu.Item>
                     <Menu.Item>
-                        <Link to={{ pathname: '/users' }}>User</Link>
+                        <Link to={{ pathname: '/user' }}>User</Link>
                     </Menu.Item>
                     <Menu.Item>
-                        <Link to={{ pathname: '/posts' }}>Post</Link>
+                        <Link to={{ pathname: '/users' }}>Users</Link>
                     </Menu.Item>
                     <Menu.Item>
-                        <Link to={{ pathname: '/photos' }}>Photo</Link>
+                        <Link to={{ pathname: '/post' }}>Post</Link>
+                    </Menu.Item>
+                    <Menu.Item>
+                        <Link to={{ pathname: '/photo' }}>Photo</Link>
+                    </Menu.Item>
+                    <Menu.Item>
+                        <Link to={{ pathname: '/retry' }}>Retry Call Api </Link>
                     </Menu.Item>
                 </Menu>
             </Layout.Sider>
-            <Layout.Content>
+            <Layout.Content style={{ padding: 24 }}>
                 {children}
             </Layout.Content>
         </Layout>

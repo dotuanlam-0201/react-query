@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query'
+import { keepPreviousData, useQuery } from '@tanstack/react-query'
 import { Table } from 'antd'
 
 const PostComponent = () => {
@@ -8,6 +8,7 @@ const PostComponent = () => {
             fetch('https://jsonplaceholder.typicode.com/posts').then(
                 (res) => res.json(),
             ),
+        placeholderData: keepPreviousData,
     })
 
     if (error) return 'An error has occurred: ' + error.message

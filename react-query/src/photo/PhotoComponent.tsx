@@ -1,14 +1,15 @@
-import { useQuery } from "@tanstack/react-query";
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { Avatar, Row } from "antd";
 import { TypePhoto } from "../models";
 import { getPhotos } from "../utils/photo.api";
 
 const PhotoComponent = () => {
+    
     const { data, isLoading, error } = useQuery({
         queryKey: ['photos'],
         queryFn: () => getPhotos(),
+        placeholderData: keepPreviousData,
     })
-    console.log(data);
 
     if (isLoading) {
         return 'Loading...'
