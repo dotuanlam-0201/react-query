@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --step0: #ff615d;
+  --step1: #bad5ea;
+  --step2: #fd8769;
+  --step3: #356d94;
+  --step4: #ffdcb3;
+  --step5: #5ca72b;
+  --step6: #64119b;
+}
